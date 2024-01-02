@@ -1,0 +1,72 @@
+import numpy as np
+import io
+import matplotlib.pyplot as plt
+import pandas as pd
+
+from google.colab import files
+uploaded = files.upload()
+
+data = pd.read_csv('dd2.csv - Sheet1.csv')
+data
+
+SNO	NAME	PE1	PE2	TOTAL
+0	1	Divya	25	25	50
+1	2	Dhanya	24	24	48
+2	3	Kamalikkaa	23	21	44
+3	4	Surya	25	22	47
+4	5	Manasa	23	23	46
+5	6	Keshav	22	21	43
+6	7	Yuchitra	23	21	44
+7	8	Preeti	21	20	41
+8	9	Priyanka	20	11	31
+9	10	Pon	20	11	31
+10	11	Jayalakshmi	23	24	47
+11	12	Gowri	12	11	23
+12	13	Varsha	21	21	42
+13	14	Sreeja	12	11	23
+14	15	Lithisha	12	9	21
+15	16	Leisha	17	19	36
+16	17	janice	19	19	38
+17	18	nithya	16	18	34
+18	19	Ayshwarya	11	9	20
+19	20	Akshaya	10	8	18
+
+
+
+# Histogram
+plt.hist(data['PE1'] , bins=10 , edgecolor = 'k')
+plt.xlabel("marks")
+plt.title("PE1")
+plt.ylabel("label")
+
+
+
+
+
+
+
+
+
+
+# Histogram
+plt.hist(data['PE2'] , bins=10 , edgecolor = 'r')
+plt.xlabel("marks")
+plt.title("PE2")
+plt.ylabel("label")
+
+
+
+
+
+
+
+
+
+
+#Histogram
+plt.hist(data['TOTAL'] , bins=10 , edgecolor = 'm')
+plt.xlabel("marks")
+plt.title("TOTAL")
+plt.ylabel("label")
+
+
